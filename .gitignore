@@ -1,0 +1,41 @@
+# IDE & Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment & Sensitive files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Docker & Database persistent data
+db_data/
+mysql_data/
+*.sql.gz
+*.sql.tar.gz
+
+# Logs & Cache
+logs/
+*.log
+tmp/
+temp/
+
+# Composer & Node dependencies (if used)
+vendor/
+node_modules/
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
