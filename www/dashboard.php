@@ -47,7 +47,7 @@ $missed_pct = $total_logs > 0 ? round(($missed_count / $total_logs) * 100, 1) : 
 <head>
     <meta charset="UTF-8">
     <title>MedinTime - Dashboard สรุปภาพรวม</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
     <style>
         .grid-stats {
             display: grid;

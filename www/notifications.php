@@ -42,7 +42,7 @@ include 'navbar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedinTime - การแจ้งเตือน (Notifications)</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
     <style>
         .filter-bar {
             display: flex;
@@ -114,9 +114,9 @@ include 'navbar.php';
                             <th>ประเภท</th>
                             <th>หัวข้อการแจ้งเตือน</th>
                             <th>รายละเอียดข้อความ</th>
-                            <th>ยาที่เกี่ยวข้อง</th>
-                            <th>เวลาตามกำหนด</th>
-                            <th>เวลาที่สร้าง</th>
+                            <th>รายการยาประจำตัว</th>
+                            <th>เวลาทานตามกำหนด</th>
+                            <th>เวลาที่บันทึก</th>
                         </tr>
                     </thead>
                     <tbody>

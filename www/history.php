@@ -18,7 +18,7 @@ $logs = $conn->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>MedinTime - ประวัติการกินยา</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
 </head>
 <body>
     <div class="container">

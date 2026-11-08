@@ -7,36 +7,42 @@
 
 /* ── CSS Variables ───────────────────────────────────────── */
 :root {
-    --cream:         #f5d8c8;
-    --silver:        #dfe2e3;
-    --lavender:      #c6ccdf;
-    --sky:           #acbedd;
-    --primary:       #709ed0;
-    --primary-dark:  #5786b8;
-    --primary-deeper:#3f6a9a;
+    --cream: #f5d8c8;
+    --silver: #dfe2e3;
+    --lavender: #c6ccdf;
+    --sky: #acbedd;
+    --primary: #709ed0;
+    --primary-dark: #5786b8;
+    --primary-deeper: #3f6a9a;
 
-    --text-dark:     #2c3e50;
-    --text-mid:      #4a5568;
-    --text-light:    #718096;
+    --text-dark: #2c3e50;
+    --text-mid: #4a5568;
+    --text-light: #718096;
 
-    --white:         #ffffff;
-    --surface:       rgba(255, 255, 255, 0.82);
+    --white: #ffffff;
+    --surface: rgba(255, 255, 255, 0.82);
 
-    --radius-sm:     6px;
-    --radius-md:     12px;
-    --radius-lg:     18px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
 
-    --shadow-sm:     0 2px 8px rgba(112, 158, 208, 0.10);
-    --shadow-md:     0 6px 24px rgba(112, 158, 208, 0.16);
-    --shadow-lg:     0 12px 40px rgba(112, 158, 208, 0.22);
+    --shadow-sm: 0 2px 8px rgba(112, 158, 208, 0.10);
+    --shadow-md: 0 6px 24px rgba(112, 158, 208, 0.16);
+    --shadow-lg: 0 12px 40px rgba(112, 158, 208, 0.22);
 
-    --transition:    all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ── Reset & Base ────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Sarabun', 'Inter', sans-serif;
@@ -54,10 +60,22 @@ body {
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--silver); }
-::-webkit-scrollbar-thumb { background: var(--sky); border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--silver);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sky);
+    border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
 
 /* ── Navbar ──────────────────────────────────────────────── */
 .navbar {
@@ -77,11 +95,11 @@ body {
     font-weight: 700;
     color: var(--white);
     letter-spacing: 0.3px;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .navbar a {
-    color: rgba(255,255,255,0.90);
+    color: rgba(255, 255, 255, 0.90);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
@@ -94,9 +112,9 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    background: rgba(255,255,255,0.20);
+    background: rgba(255, 255, 255, 0.20);
     color: var(--white);
-    border-color: rgba(255,255,255,0.25);
+    border-color: rgba(255, 255, 255, 0.25);
     transform: translateY(-1px);
 }
 
@@ -116,7 +134,7 @@ body {
     padding: 28px 32px;
     box-shadow: var(--shadow-md);
     margin-bottom: 28px;
-    border: 1px solid rgba(255,255,255,0.55);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     position: relative;
     overflow: hidden;
     transition: var(--transition);
@@ -126,7 +144,9 @@ body {
 .card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--cream), var(--sky), var(--primary));
 }
@@ -136,7 +156,8 @@ body {
     transform: translateY(-2px);
 }
 
-.card h2, .card h3 {
+.card h2,
+.card h3 {
     font-weight: 700;
     color: var(--primary-deeper);
     margin-bottom: 20px;
@@ -153,15 +174,29 @@ table {
     font-size: 0.95rem;
 }
 
+thead, thead tr {
+    background: #5786b8 !important;
+    background-image: none !important;
+}
+
+thead th,
 th {
-    background: linear-gradient(90deg, var(--primary) 0%, var(--sky) 100%);
-    color: var(--white);
+    background: #5786b8 !important;
+    background-color: #5786b8 !important;
+    background-image: none !important;
+    color: var(--white) !important;
     text-align: left;
     padding: 13px 18px;
     font-weight: 600;
     font-size: 0.87rem;
     letter-spacing: 0.4px;
     text-transform: uppercase;
+    border-right: 1px solid #ffffff;
+}
+
+thead th:last-child,
+th:last-child {
+    border-right: none;
 }
 
 td {
@@ -245,7 +280,7 @@ label {
     margin-bottom: 14px;
     border: 1.5px solid var(--lavender);
     border-radius: var(--radius-sm);
-    background: rgba(255,255,255,0.90);
+    background: rgba(255, 255, 255, 0.90);
     color: var(--text-dark);
     font-family: inherit;
     font-size: 0.95rem;
@@ -260,7 +295,9 @@ label {
     box-shadow: 0 0 0 3px rgba(112, 158, 208, 0.18);
 }
 
-.form-control::placeholder { color: #aab0bb; }
+.form-control::placeholder {
+    color: #aab0bb;
+}
 
 /* ── Buttons ─────────────────────────────────────────────── */
 .btn-primary {
@@ -286,7 +323,9 @@ label {
     box-shadow: 0 6px 20px rgba(112, 158, 208, 0.45);
 }
 
-.btn-primary:active { transform: translateY(0); }
+.btn-primary:active {
+    transform: translateY(0);
+}
 
 .btn-danger {
     background: linear-gradient(135deg, #e74c3c, #c0392b);
@@ -312,8 +351,15 @@ label {
 
 /* ── Page-in animation ───────────────────────────────────── */
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
@@ -323,20 +369,40 @@ label {
         gap: 12px;
         padding: 1rem;
     }
-    .navbar div { display: flex; flex-wrap: wrap; justify-content: center; }
-    .container  { margin: 20px auto; padding: 0 14px; }
-    .card       { padding: 20px 18px; }
-    th, td      { padding: 10px 12px; font-size: 0.88rem; }
-/* Reminder page custom styles */
-.reminder-card {
-    transition: var(--transition);
-}
-.reminder-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-.reminder-badge {
-    font-size: 0.85rem;
-    padding: 0.35rem 0.75rem;
-}
+
+    .navbar div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 14px;
+    }
+
+    .card {
+        padding: 20px 18px;
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+        font-size: 0.88rem;
+    }
+
+    /* Reminder page custom styles */
+    .reminder-card {
+        transition: var(--transition);
+    }
+
+    .reminder-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .reminder-badge {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.75rem;
+    }
 }
